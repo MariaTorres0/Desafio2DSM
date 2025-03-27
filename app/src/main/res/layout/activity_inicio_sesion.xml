@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/waves_background">
+
+    <TextView
+        android:id="@+id/titleInicioSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inicio de sesión"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="320dp"/>
+
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="Email"
+        android:background="@color/inputBackground"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/titleInicioSesion"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/inputContra"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="Contraseña"
+        android:background="@color/inputBackground"
+        android:padding="10dp"
+        android:inputType="textPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/inputEmail"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Iniciar sesión"
+        android:backgroundTint="@color/buttonColor"
+        android:textColor="@color/textColor"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/inputEmail"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:id="@+id/textCuentaNueva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿No tienes una cuenta? Registrate"
+        android:textColor="@color/textColor"
+        android:textSize="14sp"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnLogin"/>
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/waves_background">
+
+    <TextView
+        android:id="@+id/titleRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear una cuenta"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="195dp"/>
+
+    <EditText
+        android:id="@+id/inputNombre"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="Nombres"
+        android:background="@color/inputBackground"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/titleRegister"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/inputApellido"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="Apellidos"
+        android:background="@color/inputBackground"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/inputNombre"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/inputEmailRegister"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="Email"
+        android:background="@color/inputBackground"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/inputApellido"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/inputContra"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="Contraseña"
+        android:background="@color/inputBackground"
+        android:padding="10dp"
+        android:inputType="textPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/inputEmailRegister"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/inputRepContra"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="Repetir contraseña"
+        android:background="@color/inputBackground"
+        android:padding="10dp"
+        android:inputType="textPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/inputContra"
+        android:layout_marginTop="15dp"/>
+
+    <CheckBox
+        android:id="@+id/checkTerminos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acepto los terminos y condiciones"
+        android:textColor="@color/textColor"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/inputRepContra"/>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Crear cuenta"
+        android:backgroundTint="@color/secondaryColor"
+        android:textColor="@color/textColor"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/checkTerminos"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/textAlreadyAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Ya tienes una cuenta? Inicia sesion"
+        android:textColor="@color/textColor"
+        android:textSize="14sp"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnRegister"/>
+</RelativeLayout>
