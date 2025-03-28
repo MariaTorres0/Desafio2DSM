@@ -13,10 +13,19 @@
         android:theme="@style/Theme.Desafios2DSM"
         tools:targetApi="31">
         <activity
-            android:name=".InicioSesionActivity"
+            android:name=".ActualizarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListadoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrarNotasActivity"
             android:exported="false" />
         <activity
             android:name=".RegistroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InicioSesionActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

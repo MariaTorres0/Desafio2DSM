@@ -5,92 +5,75 @@
     android:background="@drawable/waves_background">
 
     <TextView
-        android:id="@+id/titleRegister"
+        android:id="@+id/titleRegistroNotas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Crear una cuenta"
+        android:text="Registrar datos del estudiante"
         android:textColor="@color/textColor"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="250dp"/>
+        android:layout_marginTop="260dp"/>
 
     <EditText
-        android:id="@+id/inputNombre"
+        android:id="@+id/inputNombreEstudiante"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:hint="Nombres"
         android:background="@drawable/rounded_input"
         android:padding="10dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/titleRegister"
+        android:layout_below="@id/titleRegistroNotas"
         android:layout_marginTop="30dp"/>
 
     <EditText
-        android:id="@+id/inputApellido"
+        android:id="@+id/inputApellidoEstudiante"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:hint="Apellidos"
         android:background="@drawable/rounded_input"
         android:padding="10dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/inputNombre"
+        android:layout_below="@id/inputNombreEstudiante"
+        android:layout_marginTop="15dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerGrado"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_input"
+        android:layout_below="@id/inputApellidoEstudiante"
+        android:layout_marginTop="15dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerMateria"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_input"
+        android:layout_below="@id/spinnerGrado"
         android:layout_marginTop="15dp"/>
 
     <EditText
-        android:id="@+id/inputEmailRegister"
+        android:id="@+id/inputNota"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:hint="Email"
+        android:hint="Nota final"
         android:background="@drawable/rounded_input"
         android:padding="10dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/inputApellido"
-        android:layout_marginTop="15dp"/>
-
-    <EditText
-        android:id="@+id/inputContra"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:hint="Contraseña"
-        android:background="@drawable/rounded_input"
-        android:padding="10dp"
-        android:inputType="textPassword"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/inputEmailRegister"
-        android:layout_marginTop="15dp"/>
-
-    <EditText
-        android:id="@+id/inputRepContra"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:hint="Repetir contraseña"
-        android:background="@drawable/rounded_input"
-        android:padding="10dp"
-        android:inputType="textPassword"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/inputContra"
+        android:layout_below="@id/spinnerMateria"
         android:layout_marginTop="15dp"/>
 
     <Button
-        android:id="@+id/btnRegister"
+        android:id="@+id/btnGuardarNota"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:text="Crear cuenta"
+        android:text="Guardar datos"
         android:backgroundTint="@color/buttonColor"
         android:textColor="@color/textColor"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/inputRepContra"
+        android:layout_below="@id/inputNota"
         android:layout_marginTop="30dp"/>
-
-    <TextView
-        android:id="@+id/textAlreadyAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¿Ya tienes una cuenta? Inicia sesion"
-        android:textColor="@color/textColor"
-        android:textSize="14sp"
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/btnRegister"/>
 </RelativeLayout>
