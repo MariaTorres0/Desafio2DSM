@@ -42,7 +42,7 @@ class RegistroActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email,password)
             .addOnCompleteListener{task->
                 if(task.isSuccessful){
-                    val intent= Intent(this,MainActivity::class.java)
+                    val intent= Intent(this,InicioSesionActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
