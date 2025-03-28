@@ -49,7 +49,7 @@
         android:layout_marginTop="15dp"/>
 
     <EditText
-        android:id="@+id/inputContra"
+        android:id="@+id/inputContraRegister"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:hint="Contraseña"
@@ -69,7 +69,7 @@
         android:padding="10dp"
         android:inputType="textPassword"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/inputContra"
+        android:layout_below="@id/inputContraRegister"
         android:layout_marginTop="15dp"/>
 
     <Button
