@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/waves_background">
+
+    <TextView
+        android:id="@+id/titleListaEstudiantes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lista de Estudiantes"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="260dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEstudiantes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleListaEstudiantes"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:layout_marginBottom="80dp"/>
+
+    <Button
+        android:id="@+id/btnAgregarEstudiante"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Agregar Estudiante"
+        android:backgroundTint="@color/buttonColor"
+        android:textColor="@color/textColor"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"/>
+</RelativeLayout>
