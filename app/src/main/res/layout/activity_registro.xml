@@ -13,7 +13,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="250dp"/>
+        android:layout_marginTop="200dp"/>
 
     <EditText
         android:id="@+id/inputNombre"
@@ -22,6 +22,8 @@
         android:hint="Nombres"
         android:background="@drawable/rounded_input"
         android:padding="10dp"
+        android:textColorHint="@color/gray_medium"
+        android:textColor="@color/black"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/titleRegister"
         android:layout_marginTop="30dp"/>
@@ -33,6 +35,8 @@
         android:hint="Apellidos"
         android:background="@drawable/rounded_input"
         android:padding="10dp"
+        android:textColorHint="@color/gray_medium"
+        android:textColor="@color/black"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/inputNombre"
         android:layout_marginTop="15dp"/>
@@ -44,6 +48,8 @@
         android:hint="Email"
         android:background="@drawable/rounded_input"
         android:padding="10dp"
+        android:textColorHint="@color/gray_medium"
+        android:textColor="@color/black"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/inputApellido"
         android:layout_marginTop="15dp"/>
@@ -55,6 +61,8 @@
         android:hint="Contraseña"
         android:background="@drawable/rounded_input"
         android:padding="10dp"
+        android:textColorHint="@color/gray_medium"
+        android:textColor="@color/black"
         android:inputType="textPassword"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/inputEmailRegister"
@@ -67,6 +75,8 @@
         android:hint="Repetir contraseña"
         android:background="@drawable/rounded_input"
         android:padding="10dp"
+        android:textColorHint="@color/gray_medium"
+        android:textColor="@color/black"
         android:inputType="textPassword"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/inputContraRegister"

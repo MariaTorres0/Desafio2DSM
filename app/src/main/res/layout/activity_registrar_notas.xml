@@ -13,7 +13,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="260dp"/>
+        android:layout_marginTop="200dp"/>
 
     <EditText
         android:id="@+id/inputNombreEstudiante"
@@ -22,6 +22,8 @@
         android:hint="Nombres"
         android:background="@drawable/rounded_input"
         android:padding="10dp"
+        android:textColorHint="@color/gray_medium"
+        android:textColor="@color/black"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/titleRegistroNotas"
         android:layout_marginTop="30dp"/>
@@ -33,6 +35,8 @@
         android:hint="Apellidos"
         android:background="@drawable/rounded_input"
         android:padding="10dp"
+        android:textColorHint="@color/gray_medium"
+        android:textColor="@color/black"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/inputNombreEstudiante"
         android:layout_marginTop="15dp"/>
@@ -62,6 +66,8 @@
         android:hint="Nota final"
         android:background="@drawable/rounded_input"
         android:padding="10dp"
+        android:textColorHint="@color/gray_medium"
+        android:textColor="@color/black"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/spinnerMateria"
         android:layout_marginTop="15dp"/>

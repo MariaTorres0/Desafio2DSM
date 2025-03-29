@@ -6,11 +6,9 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
+import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.desafios2dsm.datos.Estudiante
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -38,8 +36,8 @@ class ActualizarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_actualizar)
 
-        inputNombre=findViewById(R.id.inputNombreEstudianteA)
-        inputApellido=findViewById(R.id.inputApellidoEstudianteA)
+        inputNombre = findViewById(R.id.inputNombreEstudianteA)
+        inputApellido = findViewById(R.id.inputApellidoEstudianteA)
         spinnerGrado = findViewById(R.id.spinnerGradoA)
         spinnerMateria = findViewById(R.id.spinnerMateriaA)
         inputNota = findViewById(R.id.inputNotaA)
@@ -59,10 +57,9 @@ class ActualizarActivity : AppCompatActivity() {
         btnEliminar.setOnClickListener {
             eliminarEstudiante()
         }
-
     }
 
-    private fun cargarDatosEstudiantes(){
+    private fun cargarDatosEstudiantes() {
         if (estudianteId != null) {
             database.child(estudianteId!!).addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
@@ -75,7 +72,7 @@ class ActualizarActivity : AppCompatActivity() {
                         // Seleccionar en los Spinners
                         cargarSpinners()
 
-                        val gradoPos=grados.indexOf(it.grado)
+                        val gradoPos = grados.indexOf(it.grado)
                         if (gradoPos >= 0) {
                             spinnerGrado.setSelection(gradoPos)
                         }
@@ -95,16 +92,39 @@ class ActualizarActivity : AppCompatActivity() {
     }
 
     private fun cargarSpinners() {
+        val adapterGrado = object : ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, grados) {
+            override fun getView(position: Int, convertView: android.view.View?, parent: android.view.ViewGroup): android.view.View {
+                val view = super.getView(position, convertView, parent) as TextView
+                view.setTextColor(android.graphics.Color.BLACK) // El texto seleccionado será negro
+                return view
+            }
 
-
-        val adapterGrado = ArrayAdapter(this, android.R.layout.simple_spinner_item, grados)
+            override fun getDropDownView(position: Int, convertView: android.view.View?, parent: android.view.ViewGroup): android.view.View {
+                val view = super.getDropDownView(position, convertView, parent) as TextView
+                view.setTextColor(android.graphics.Color.WHITE) // Las opciones desplegadas serán blancas
+                return view
+            }
+        }
         adapterGrado.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerGrado.adapter = adapterGrado
 
-        val adapterMateria = ArrayAdapter(this, android.R.layout.simple_spinner_item, materias)
+        val adapterMateria = object : ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, materias) {
+            override fun getView(position: Int, convertView: android.view.View?, parent: android.view.ViewGroup): android.view.View {
+                val view = super.getView(position, convertView, parent) as TextView
+                view.setTextColor(android.graphics.Color.BLACK) // El texto seleccionado será negro
+                return view
+            }
+
+            override fun getDropDownView(position: Int, convertView: android.view.View?, parent: android.view.ViewGroup): android.view.View {
+                val view = super.getDropDownView(position, convertView, parent) as TextView
+                view.setTextColor(android.graphics.Color.WHITE) // Las opciones desplegadas serán blancas
+                return view
+            }
+        }
         adapterMateria.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerMateria.adapter = adapterMateria
     }
+
     private fun actualizarEstudiante() {
         val nombre = inputNombre.text.toString().trim()
         val apellido = inputApellido.text.toString().trim()
@@ -143,11 +163,10 @@ class ActualizarActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun redirigirAListado() {
         val intent = Intent(this, ListadoActivity::class.java)
         startActivity(intent)
         finish()  // Cierra la actividad actual
     }
-
-
 }

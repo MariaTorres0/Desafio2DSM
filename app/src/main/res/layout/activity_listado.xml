@@ -12,7 +12,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="210dp"/>
+        android:layout_marginTop="200dp"/>
 
     <View
         android:layout_width="match_parent"
@@ -21,7 +21,6 @@
         android:layout_marginTop="10dp"
         android:background="@color/textColor" />
 
-    <!-- El RecyclerView ya maneja el scroll, solo debes asegurarte de que ocupe el espacio correcto -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewEstudiantes"
         android:layout_width="match_parent"

@@ -1,10 +1,12 @@
 package com.example.desafios2dsm
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.view.View
+import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.example.desafios2dsm.R
 import com.google.firebase.database.FirebaseDatabase
 import com.example.desafios2dsm.datos.Estudiante
 
@@ -43,11 +45,35 @@ class RegistrarNotasActivity : AppCompatActivity() {
         val grados = listOf("Seleccione un grado", "1er grado", "2do grado", "3er grado", "4to grado", "5to grado", "6to grado", "7mo grado", "8vo grado", "9no grado")
         val materias = listOf("Seleccione una materia", "Matemáticas", "Ciencias", "Sociales", "Lenguaje", "Inglés")
 
-        val adapterGrado = ArrayAdapter(this, android.R.layout.simple_spinner_item, grados)
+        val adapterGrado = object : ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, grados) {
+            override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+                val view = super.getView(position, convertView, parent) as TextView
+                view.setTextColor(if (position == 0) Color.parseColor("#B6B6B6") else Color.BLACK)
+                return view
+            }
+
+            override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
+                val view = super.getDropDownView(position, convertView, parent) as TextView
+                view.setTextColor(Color.WHITE)
+                return view
+            }
+        }
         adapterGrado.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerGrado.adapter = adapterGrado
 
-        val adapterMateria = ArrayAdapter(this, android.R.layout.simple_spinner_item, materias)
+        val adapterMateria = object : ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, materias) {
+            override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+                val view = super.getView(position, convertView, parent) as TextView
+                view.setTextColor(if (position == 0) Color.parseColor("#B6B6B6") else Color.BLACK)
+                return view
+            }
+
+            override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
+                val view = super.getDropDownView(position, convertView, parent) as TextView
+                view.setTextColor(Color.WHITE)
+                return view
+            }
+        }
         adapterMateria.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerMateria.adapter = adapterMateria
     }

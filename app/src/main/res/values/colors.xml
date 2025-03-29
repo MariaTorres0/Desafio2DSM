@@ -6,6 +6,9 @@
     <color name="buttonColor">#5A78F0</color>
     <color name="textColor">#FFFFFF</color>
     <color name="inputBackground">#EFEFEF</color>
-    <color name="list">#ECF3FF</color>
+    <color name="list">#E3EDFF</color>
     <color name="buttoneliminar">#f94449</color>
+    <color name="gray_medium">#B6B6B6</color>
+    <color name="black">#000</color>
+    <color name="gray">#7C7C7C</color>
 </resources>
