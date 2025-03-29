@@ -5,7 +5,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.desafios2dsm.R
 import com.google.firebase.database.FirebaseDatabase
-import com.example.desafios2dsm.models.Estudiante
+import com.example.desafios2dsm.datos.Estudiante
 
 class RegistrarNotasActivity : AppCompatActivity() {
 
