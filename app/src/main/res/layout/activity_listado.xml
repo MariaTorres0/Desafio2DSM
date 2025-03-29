@@ -13,25 +13,34 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="260dp"/>
+        android:layout_marginTop="220dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/titleListaEstudiantes"
+        android:layout_marginTop="10dp"
+        android:background="@color/textColor" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewEstudiantes"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_below="@id/titleListaEstudiantes"
+        android:layout_above="@id/btnAgregarEstudiante"
         android:layout_marginTop="20dp"
         android:padding="16dp"
-        android:layout_marginBottom="80dp"/>
+        android:contentDescription="Lista de estudiantes" />
 
-    <Button
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnAgregarEstudiante"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:text="Agregar Estudiante"
-        android:backgroundTint="@color/buttonColor"
-        android:textColor="@color/textColor"
-        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/add"
+        android:tint="@color/textColor"
+        android:backgroundTint="@color/backgroundGradientEnd"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"/>
+        android:contentDescription="Agregar estudiante" />
 </RelativeLayout>
