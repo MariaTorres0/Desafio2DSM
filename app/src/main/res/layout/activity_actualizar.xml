@@ -15,7 +15,7 @@
         android:layout_marginTop="260dp"/>
 
     <EditText
-        android:id="@+id/inputNombreEstudiante"
+        android:id="@+id/inputNombreEstudianteA"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:hint="Nombres"
@@ -26,54 +26,54 @@
         android:layout_marginTop="30dp"/>
 
     <EditText
-        android:id="@+id/inputApellidoEstudiante"
+        android:id="@+id/inputApellidoEstudianteA"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:hint="Apellidos"
         android:background="@drawable/rounded_input"
         android:padding="10dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/inputNombreEstudiante"
+        android:layout_below="@id/inputNombreEstudianteA"
         android:layout_marginTop="15dp"/>
 
     <Spinner
-        android:id="@+id/spinnerGrado"
+        android:id="@+id/spinnerGradoA"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/rounded_input"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/inputApellidoEstudiante"
+        android:layout_below="@id/inputApellidoEstudianteA"
         android:layout_marginTop="15dp"/>
 
     <Spinner
-        android:id="@+id/spinnerMateria"
+        android:id="@+id/spinnerMateriaA"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/rounded_input"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/spinnerGrado"
+        android:layout_below="@id/spinnerGradoA"
         android:layout_marginTop="15dp"/>
 
     <EditText
-        android:id="@+id/inputNota"
+        android:id="@+id/inputNotaA"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:hint="Nota final"
         android:background="@drawable/rounded_input"
         android:padding="10dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/spinnerMateria"
+        android:layout_below="@id/spinnerMateriaA"
         android:layout_marginTop="15dp"/>
 
     <Button
-        android:id="@+id/btnGuardarNota"
+        android:id="@+id/btnGuardarNotaA"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:text="Actualizar datos"
         android:backgroundTint="@color/buttonColor"
         android:textColor="@color/textColor"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/inputNota"
+        android:layout_below="@id/inputNotaA"
         android:layout_marginTop="30dp"/>
 </RelativeLayout>
 

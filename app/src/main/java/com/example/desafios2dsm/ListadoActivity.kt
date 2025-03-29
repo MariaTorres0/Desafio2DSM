@@ -25,7 +25,10 @@ class ListadoActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         estudianteAdapter = EstudianteAdapter(emptyList())
+
         recyclerView.adapter = estudianteAdapter
+
+
 
         database = FirebaseDatabase.getInstance().getReference("estudiantes")
 

@@ -1,11 +1,13 @@
 package com.example.desafios2dsm.adapters
 
+import android.content.Intent
 import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.desafios2dsm.ActualizarActivity
 import com.example.desafios2dsm.R
 import com.example.desafios2dsm.datos.Estudiante
 
@@ -30,6 +32,12 @@ class EstudianteAdapter(private var listaEstudiantes: List<Estudiante>) :
                     "<b> -|- Materia: </b>${estudiante.materia}" +
                     "<b> -|- Nota: </b>${estudiante.nota}" + "<b> -|</b>"
         )
+
+        holder.itemView.setOnClickListener{
+            val intent=Intent(holder.itemView.context,ActualizarActivity::class.java)
+            intent.putExtra("ESTUDIANTE_ID",estudiante.id)
+            holder.itemView.context.startActivity(intent)
+        }
 
     }
 
