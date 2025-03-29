@@ -27,8 +27,21 @@ class RegistroActivity : AppCompatActivity() {
 
         buttonRegister=findViewById(R.id.btnRegister)
         buttonRegister.setOnClickListener {
+            val nombre=findViewById<EditText>(R.id.inputNombre).text.toString()
+            val apellido=findViewById<EditText>(R.id.inputApellido).text.toString()
             val email=findViewById<EditText>(R.id.inputEmailRegister).text.toString()
             val password=findViewById<EditText>(R.id.inputContraRegister).text.toString()
+            val repassword=findViewById<EditText>(R.id.inputRepContra).text.toString()
+
+            if (nombre.isEmpty()||apellido.isEmpty()||email.isEmpty() || password.isEmpty() || repassword.isEmpty()) {
+                Toast.makeText(this, "❌ Todos los campos son obligatorios", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if (password != repassword) {
+                Toast.makeText(this, "❌ Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             this.register(email,password)
         }
         textLogin=findViewById(R.id.textAlreadyAccount)
@@ -42,6 +55,7 @@ class RegistroActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email,password)
             .addOnCompleteListener{task->
                 if(task.isSuccessful){
+                    Toast.makeText(this, "✅ Registro exitoso", Toast.LENGTH_SHORT).show()
                     val intent= Intent(this,InicioSesionActivity::class.java)
                     startActivity(intent)
                     finish()
