@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="640dp"
+    android:viewportWidth="360"
+    android:viewportHeight="640">
+
+    <!-- Fondo del vector -->
+    <path
+        android:fillColor="#89B4F8"
+        android:pathData="M0,0 L360,0 L360,640 L0,640 Z" />
+
+    <!-- Curva superior -->
+    <path
+        android:fillColor="@color/buttonColor"
+        android:pathData="M0,200 C60,100 120,100 180,200 C240,300 300,300 360,200 L360,0 L0,0 Z" />
+
+    <!-- Curva inferior -->
+    <path
+        android:fillColor="@color/buttonColor"
+        android:pathData="M0,490 C60,390 120,390 180,490 C240,590 300,590 360,490 L360,640 L0,640 Z" />
+
+</vector>
