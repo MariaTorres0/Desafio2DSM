@@ -1,5 +1,6 @@
 package com.example.desafios2dsm.adapters
 
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,7 +25,12 @@ class EstudianteAdapter(private var listaEstudiantes: List<Estudiante>) :
     override fun onBindViewHolder(holder: EstudianteViewHolder, position: Int) {
         val estudiante = listaEstudiantes[position]
         holder.txtNombre.text = "${estudiante.nombre} ${estudiante.apellido}"
-        holder.txtDetalle.text = "Grado: ${estudiante.grado} - Materia: ${estudiante.materia} - Nota: ${estudiante.nota}"
+        holder.txtDetalle.text = Html.fromHtml(
+            "<b> |- Grado: </b>${estudiante.grado}" +
+                    "<b> -|- Materia: </b>${estudiante.materia}" +
+                    "<b> -|- Nota: </b>${estudiante.nota}" + "<b> -|</b>"
+        )
+
     }
 
     override fun getItemCount(): Int = listaEstudiantes.size

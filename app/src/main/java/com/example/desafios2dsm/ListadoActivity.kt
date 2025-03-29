@@ -48,7 +48,6 @@ class ListadoActivity : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                // Manejo de error
             }
         })
     }

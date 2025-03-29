@@ -1,5 +1,6 @@
 package com.example.desafios2dsm
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -40,7 +41,7 @@ class RegistrarNotasActivity : AppCompatActivity() {
 
     private fun cargarSpinners() {
         val grados = listOf("Seleccione un grado", "1er grado", "2do grado", "3er grado", "4to grado", "5to grado", "6to grado", "7mo grado", "8vo grado", "9no grado")
-        val materias = listOf("Seleccione una materia", "Matemáticas", "Ciencias", "Sociales", "Lenguaje", "Inglés", "Educación física")
+        val materias = listOf("Seleccione una materia", "Matemáticas", "Ciencias", "Sociales", "Lenguaje", "Inglés")
 
         val adapterGrado = ArrayAdapter(this, android.R.layout.simple_spinner_item, grados)
         adapterGrado.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -74,17 +75,14 @@ class RegistrarNotasActivity : AppCompatActivity() {
 
         refEstudiantes.child(id).setValue(estudiante).addOnSuccessListener {
             Toast.makeText(this, "Estudiante registrado correctamente", Toast.LENGTH_SHORT).show()
-            limpiarCampos()
+            redirigirAListado()
         }.addOnFailureListener {
             Toast.makeText(this, "Error al registrar", Toast.LENGTH_SHORT).show()
         }
     }
 
-    private fun limpiarCampos() {
-        inputNombre.text.clear()
-        inputApellido.text.clear()
-        inputNota.text.clear()
-        spinnerGrado.setSelection(0)
-        spinnerMateria.setSelection(0)
+    private fun redirigirAListado() {
+        val intent = Intent(this, ListadoActivity::class.java)
+        startActivity(intent)
     }
 }

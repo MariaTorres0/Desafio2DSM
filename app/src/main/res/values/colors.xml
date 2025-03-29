@@ -6,4 +6,5 @@
     <color name="buttonColor">#5A78F0</color>
     <color name="textColor">#FFFFFF</color>
     <color name="inputBackground">#EFEFEF</color>
+    <color name="list">#ECF3FF</color>
 </resources>
