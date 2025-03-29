@@ -29,7 +29,7 @@ class InicioSesionActivity : AppCompatActivity() {
             val email =findViewById<EditText>(R.id.inputEmail).text.toString()
             val password=findViewById<EditText>(R.id.inputContra).text.toString()
             if(email.isEmpty()||password.isEmpty()){
-                Toast.makeText(this, "❌ Todos los campos son obligatorios", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
             this.login(email,password)
@@ -42,7 +42,7 @@ class InicioSesionActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email,password)
             .addOnCompleteListener{task->
                 if (task.isSuccessful){
-                    Toast.makeText(this, "✅ Inicio de Sesión exitoso", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Inicio de Sesión exitoso", Toast.LENGTH_SHORT).show()
 
                     val intent = Intent(this,ListadoActivity::class.java)
                     startActivity(intent)
