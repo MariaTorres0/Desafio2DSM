@@ -1,5 +1,6 @@
 package com.example.desafios2dsm
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -26,6 +27,7 @@ class ActualizarActivity : AppCompatActivity() {
     private lateinit var spinnerMateria: Spinner
     private lateinit var inputNota: EditText
     private lateinit var btnActualizar: Button
+    private lateinit var btnEliminar: Button
 
     val grados = listOf("Seleccione un grado", "1er grado", "2do grado", "3er grado", "4to grado", "5to grado", "6to grado", "7mo grado", "8vo grado", "9no grado")
     val materias = listOf("Seleccione una materia", "Matemáticas", "Ciencias", "Sociales", "Lenguaje", "Inglés")
@@ -42,6 +44,7 @@ class ActualizarActivity : AppCompatActivity() {
         spinnerMateria = findViewById(R.id.spinnerMateriaA)
         inputNota = findViewById(R.id.inputNotaA)
         btnActualizar = findViewById(R.id.btnGuardarNotaA)
+        btnEliminar = findViewById(R.id.btnEliminar)
 
         estudianteId = intent.getStringExtra("ESTUDIANTE_ID")
 
@@ -51,6 +54,10 @@ class ActualizarActivity : AppCompatActivity() {
         // Configurar el botón de actualización
         btnActualizar.setOnClickListener {
             actualizarEstudiante()
+        }
+
+        btnEliminar.setOnClickListener {
+            eliminarEstudiante()
         }
 
     }
@@ -124,6 +131,22 @@ class ActualizarActivity : AppCompatActivity() {
         }.addOnFailureListener {
             Toast.makeText(this, "Error al actualizar", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun eliminarEstudiante() {
+        if (estudianteId != null) {
+            database.child(estudianteId!!).removeValue().addOnSuccessListener {
+                Toast.makeText(this, "Estudiante eliminado correctamente", Toast.LENGTH_SHORT).show()
+                redirigirAListado()
+            }.addOnFailureListener {
+                Toast.makeText(this, "Error al eliminar estudiante", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+    private fun redirigirAListado() {
+        val intent = Intent(this, ListadoActivity::class.java)
+        startActivity(intent)
+        finish()  // Cierra la actividad actual
     }
 
 

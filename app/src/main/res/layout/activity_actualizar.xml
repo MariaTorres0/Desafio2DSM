@@ -12,7 +12,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="260dp"/>
+        android:layout_marginTop="180dp"/>
 
     <EditText
         android:id="@+id/inputNombreEstudianteA"
@@ -75,5 +75,15 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/inputNotaA"
         android:layout_marginTop="30dp"/>
+    <Button
+        android:id="@+id/btnEliminar"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Eliminar Estudiante"
+        android:backgroundTint="@color/buttoneliminar"
+        android:textColor="@color/textColor"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnGuardarNotaA"
+        android:layout_marginTop="15dp"/>
 </RelativeLayout>
 

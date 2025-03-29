@@ -7,4 +7,5 @@
     <color name="textColor">#FFFFFF</color>
     <color name="inputBackground">#EFEFEF</color>
     <color name="list">#ECF3FF</color>
+    <color name="buttoneliminar">#f94449</color>
 </resources>
