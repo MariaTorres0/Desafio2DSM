@@ -13,9 +13,4 @@
     <path
         android:fillColor="@color/buttonColor"
         android:pathData="M0,100 Q90,60 180,100 Q270,140 360,100 L360,0 L0,0 Z"/>
-
-    <!-- Ola inferior -->
-    <path
-        android:fillColor="@color/buttonColor"
-        android:pathData="M0,540 Q90,580 180,540 Q270,500 360,540 L360,640 L0,640 Z"/>
 </vector>
